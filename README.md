@@ -95,3 +95,7 @@ password: airflow_pass
 - Выведите список волюмов: `docker volume ls`. Должен быть волюм для 5 спринта под именем `s5-lessons_s5t4postgresql`.
 - Удалите волюм: `docker volume rm s5-lessons_s5t4postgresql`
 - Запустите контейнеры: `docker compose up -d`.
+
+
+## Тесты и коды
+`git clone --quiet git@github.com:practicum-de/sprint-5-tests.git`

@@ -8,7 +8,7 @@ class UserReader:
     def __init__(self, mc: MongoConnect) -> None:
         self.dbs = mc.client()
 
-    def get_restaurants(self, load_threshold: datetime, limit) -> List[Dict]:
+    def get_users(self, load_threshold: datetime, limit) -> List[Dict]:
         # Формируем фильтр: больше чем дата последней загрузки
         filter = {'update_ts': {'$gt': load_threshold}}
 
@@ -16,5 +16,5 @@ class UserReader:
         sort = [('update_ts', 1)]
 
         # Вычитываем документы из MongoDB с применением фильтра и сортировки.
-        docs = list(self.dbs.get_collection("restaurants").find(filter=filter, sort=sort, limit=limit))
+        docs = list(self.dbs.get_collection("users").find(filter=filter, sort=sort, limit=limit))
         return docs

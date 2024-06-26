@@ -1,0 +1,1 @@
+alter table cdm.dm_settlement_report add constraint pk_dm_settlement_report_id primary key(id);

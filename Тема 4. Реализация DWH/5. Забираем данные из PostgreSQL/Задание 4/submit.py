@@ -10,7 +10,7 @@ def submit(t_code, rlz_file=''):
 
         with open(user_file, 'r') as u_file:
             user_code = u_file.read()
-
+    print (user_code, t_code)
     r = requests.post(
         'http://localhost:3002',
         json={
